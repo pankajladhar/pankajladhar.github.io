@@ -10,7 +10,7 @@
         intiCarousel: function() {
             $('.carousel').carousel({
                 pause: "false",
-                interval: 400000000
+                interval: 8000
             });
 
             $('.carousel').css({

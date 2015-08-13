@@ -814,7 +814,7 @@ pre code {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1020px) {
   .container {
     width: 970px;
   }
@@ -1294,7 +1294,7 @@ pre code {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1020px) {
   .col-md-1,
   .col-md-2,
   .col-md-3,
@@ -6631,7 +6631,7 @@ td.visible-xs {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .visible-xs.visible-md {
     display: block !important;
   }
@@ -6702,7 +6702,7 @@ td.visible-sm {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .visible-sm.visible-md {
     display: block !important;
   }
@@ -6773,7 +6773,7 @@ td.visible-md {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .visible-md {
     display: block !important;
   }
@@ -6844,7 +6844,7 @@ td.visible-lg {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .visible-lg.visible-md {
     display: block !important;
   }
@@ -6911,7 +6911,7 @@ td.hidden-xs {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .hidden-xs.hidden-md,
   tr.hidden-xs.hidden-md,
   th.hidden-xs.hidden-md,
@@ -6964,7 +6964,7 @@ td.hidden-sm {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .hidden-sm.hidden-md,
   tr.hidden-sm.hidden-md,
   th.hidden-sm.hidden-md,
@@ -7017,7 +7017,7 @@ td.hidden-md {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .hidden-md,
   tr.hidden-md,
   th.hidden-md,
@@ -7070,7 +7070,7 @@ td.hidden-lg {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1020px) and (max-width: 1199px) {
   .hidden-lg.hidden-md,
   tr.hidden-lg.hidden-md,
   th.hidden-lg.hidden-md,

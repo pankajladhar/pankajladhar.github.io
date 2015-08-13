@@ -16,14 +16,21 @@ body {
 
 .logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 25px;
+    left: 25px;
     color: #fff;
     z-index: 999;
+    @media (max-width: 760px) {
+        top: 10px;
+        left: 10px;
+        img{
+            width: 60%;
+        }
+    }
 }
 
 .product-container {
-    margin-top: 60px;
+    margin-top: 45px;
     padding-bottom: 40px;
     .product-row {
         margin-bottom: 40px;
@@ -55,6 +62,29 @@ body {
         }
     }
 }
+.carousel-control-up{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border: 1px #000 solid;
+    background: #000;
+    border-radius: 3px;
+    padding: 10px 13px;
+    display: none;
+    &:hover {
+        color: #000;
+        background: #fff;
+        text-decoration: none;
+        outline: none;
+        opacity: 0.9;
+    }
+    span.glyphicon-chevron-up{
+        top: 3px;
+    }
+}
 
 #thanks {
     display: none;
@@ -77,7 +107,13 @@ body {
         }
     }
 }
-
+.about-text{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    margin-bottom: 50px;
+    padding-top: 15px;
+}
 .form-btn {
     position: relative;
     cursor: pointer;
@@ -113,6 +149,9 @@ div.product-box {
     position: relative;
     overflow: hidden;
     padding: 20px 20px 25px;
+    @media (max-width: 767px) {
+        border: 1px solid #ddd;
+    }
     img.product-image {
         margin-bottom: 20px;
         width: 210px;

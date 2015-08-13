@@ -11,13 +11,19 @@ body {
 
 .logo {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 25px;
   color: #fff;
   z-index: 999; }
+  @media (max-width: 760px) {
+    .logo {
+      top: 10px;
+      left: 10px; }
+      .logo img {
+        width: 60%; } }
 
 .product-container {
-  margin-top: 60px;
+  margin-top: 45px;
   padding-bottom: 40px; }
   .product-container .product-row {
     margin-bottom: 40px; }
@@ -43,6 +49,27 @@ body {
   .carousel-indicators .carousel-control-down span.glyphicon-chevron-down {
     top: 4px; }
 
+.carousel-control-up {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  border: 1px #000 solid;
+  background: #000;
+  border-radius: 3px;
+  padding: 10px 13px;
+  display: none; }
+  .carousel-control-up:hover {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    outline: none;
+    opacity: 0.9; }
+  .carousel-control-up span.glyphicon-chevron-up {
+    top: 3px; }
+
 #thanks {
   display: none; }
   #thanks span.alert {
@@ -60,6 +87,13 @@ body {
       color: #B7CAB0; }
       #thanks span.alert i:hover {
         color: #4A6341; }
+
+.about-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  margin-bottom: 50px;
+  padding-top: 15px; }
 
 .form-btn {
   position: relative;
@@ -94,6 +128,9 @@ div.product-box {
   position: relative;
   overflow: hidden;
   padding: 20px 20px 25px; }
+  @media (max-width: 767px) {
+    div.product-box {
+      border: 1px solid #ddd; } }
   div.product-box img.product-image {
     margin-bottom: 20px;
     width: 210px;

@@ -4,12 +4,12 @@
     PRODUCTS.UTIL = {
         setProductName: function() {
             $('#detailsModal').on('show.bs.modal', function(event) {
-                var button = $(event.relatedTarget) 
+                var button = $(event.relatedTarget)
                 var prodName = button.data('product-name')
                 $('.product-name').html(prodName)
             })
         },
-        resetForm : function (){
+        resetForm: function() {
             $('#detailsModal').on('hide.bs.modal', function(e) {
                 $('.product-name').html('');
                 $('#name').val('');
@@ -30,7 +30,7 @@
             };
 
             var name = $('#name').val();
-                email = $('#email').val(),
+            email = $('#email').val(),
                 contactNumber = $('#contactNumber').val(),
                 address = $('#address').val();
             var usersRef = ref.child("customers");
@@ -88,6 +88,24 @@
             setTimeout(function() {
                 $("#thanks").slideUp(300)
             }, 5000);
+        },
+        showScrollToTop: function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollToTop').fadeIn();
+                } else {
+                    $('.scrollToTop').fadeOut();
+                }
+            });
+        },
+        scollToTop : function (){
+            //Click event to scroll to top
+            $('.scrollToTop').click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
         }
     }
 
@@ -99,6 +117,8 @@
         PRODUCTS.UTIL.removeAlertBox();
         PRODUCTS.UTIL.setProductName();
         PRODUCTS.UTIL.resetForm();
+        PRODUCTS.UTIL.showScrollToTop();
+        PRODUCTS.UTIL.scollToTop();
     });
 
 })(jQuery, window, document);

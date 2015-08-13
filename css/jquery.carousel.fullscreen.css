@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.col-md-3 div.product-box{
+	border: 1px solid #ecedee;
+    width: 100%;
+    text-align: -webkit-center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 20px 30px;
+    /*box-shadow: 3px 6px 5px rgb(222, 222, 222);*/
+    /*border-radius: 10px;*/
+}
+
+div.product-box img.product-image{
+	margin-bottom: 20px;
+}
+div.product-box:hover{
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.35); 
+
+}
+div.product-box:hover img, div.product-box img.product-image:hover {
+	-ms-transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+div.product-box 

@@ -1,0 +1,104 @@
+(function($, W, D) {
+    var PRODUCTS = {};
+
+    PRODUCTS.UTIL = {
+        setProductName: function() {
+            $('#detailsModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget) 
+                var prodName = button.data('product-name')
+                $('.product-name').html(prodName)
+            })
+        },
+        resetForm : function (){
+            $('#detailsModal').on('hide.bs.modal', function(e) {
+                $('.product-name').html('');
+                $('#name').val('');
+                $('#email').val('');
+                $('#contactNumber').val('');
+                $('#address').val('');
+            })
+        },
+        submitForm: function() {
+            var ref = new Firebase("https://baglandingpage.firebaseio.com/");
+
+            var onComplete = function(error) {
+                if (error) {
+                    console.log('Synchronization failed');
+                } else {
+                    $("#thanks").slideDown(300);
+                }
+            };
+
+            var name = $('#name').val();
+                email = $('#email').val(),
+                contactNumber = $('#contactNumber').val(),
+                address = $('#address').val();
+            var usersRef = ref.child("customers");
+            usersRef.push({
+                name: name,
+                email: email,
+                contactNumber: contactNumber,
+                address: address
+            }, onComplete);
+            $("#detailsModal").modal('hide');
+        },
+        setupFormValidation: function() {
+            //form validation rules
+            $("#detail-form").validate({
+                rules: {
+                    name: "required",
+                    address: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    contactNumber: {
+                        required: true,
+                        phoneUS: true
+                    }
+                },
+                messages: {
+                    name: "Please enter your Name",
+                    email: "Please enter a valid email address",
+                    address: "Please enter Delivery Address",
+                    contactNumber: {
+                        required: "Please enter your Contact Number",
+                        phoneUS: "Please enter valid Contact Number"
+                    }
+                },
+                submitHandler: function(form) {
+                    PRODUCTS.UTIL.submitForm();
+                }
+            });
+        },
+        closeAlertMessage: function() {
+            $('.alert-cross').on('click', function() {
+                $("#thanks").slideUp(300)
+            })
+        },
+        scrollToProducts: function() {
+            $(".carousel-control-down").on('click', function() {
+                $('html, body').animate({
+                    'scrollTop': $(".product-container").offset().top
+                }, 1000);
+            });
+        },
+        removeAlertBox: function() {
+            console.log("ddd")
+            setTimeout(function() {
+                $("#thanks").slideUp(300)
+            }, 5000);
+        }
+    }
+
+    $(D).ready(function($) {
+        $("#success-alert").hide();
+        PRODUCTS.UTIL.setupFormValidation();
+        PRODUCTS.UTIL.closeAlertMessage();
+        PRODUCTS.UTIL.scrollToProducts();
+        PRODUCTS.UTIL.removeAlertBox();
+        PRODUCTS.UTIL.setProductName();
+        PRODUCTS.UTIL.resetForm();
+    });
+
+})(jQuery, window, document);

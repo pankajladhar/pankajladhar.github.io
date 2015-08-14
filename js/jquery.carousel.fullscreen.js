@@ -1,6 +1,6 @@
 /******************************************************************************
-	Transforms the basic Twitter Bootstrap Carousel into Fullscreen Mode
-	@author Fabio Mangolini
+    Transforms the basic Twitter Bootstrap Carousel into Fullscreen Mode
+    @author Fabio Mangolini
      http://www.responsivewebmobile.com
 ******************************************************************************/
 (function($, W, D) {
@@ -10,19 +10,45 @@
         intiCarousel: function() {
             $('.carousel').carousel({
                 pause: "false",
-                interval: 8000
+                interval: 800000000
             });
 
-            $('.carousel').css({
-                'margin': 0,
-                'width': $(window).outerWidth(),
-                'height': $(window).outerHeight()
-            });
-            $('.carousel .item').css({
-                'margin': 0,
-                'width': $(window).outerWidth(),
-                'height': $(window).outerHeight()
-            });
+            if ($(W).width() > 450 && $(W).width() < 750) {
+                $('.carousel').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 100
+                });
+                $('.carousel .item').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 100
+                });
+            } 
+            else if ($(W).width() < 450 ) {
+                $('.carousel').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 100
+                });
+                $('.carousel .item').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 100
+                });
+            }
+            else {
+                $('.carousel').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 200
+                });
+                $('.carousel .item').css({
+                    'margin': 0,
+                    'width': $(window).outerWidth(),
+                    'height': $(window).outerHeight() - 200
+                });
+            }
         },
         setImageBack: function() {
             $('.carousel-inner div.item img').each(function() {
@@ -76,30 +102,25 @@
     }
     $(D).ready(function($) {
         CAROUSEL.UTIL.intiCarousel();
-        if ($(W).width() == 768)  {
-        	CAROUSEL.UTIL.setImageBackIpad()
-        	
-        }
-        else if($(W).width() < 465){
-        	CAROUSEL.UTIL.setImageBackMobile()
-        }
-        else{
-        	CAROUSEL.UTIL.setImageBack()
+        if ($(W).width() == 768) {
+            CAROUSEL.UTIL.setImageBackIpad()
+
+        } else if ($(W).width() < 465) {
+            CAROUSEL.UTIL.setImageBackMobile()
+        } else {
+            CAROUSEL.UTIL.setImageBack()
         }
     })
 
     $(W).on('resize', function() {
         CAROUSEL.UTIL.intiCarousel();
-        if ($(W).width() == 768)  {
-        	CAROUSEL.UTIL.setImageBackIpad()
-        	
-        }
-        else if($(W).width() < 465){
-        	CAROUSEL.UTIL.setImageBackMobile()
-        }
-        else{
-        	CAROUSEL.UTIL.setImageBack()
+        if ($(W).width() == 768) {
+            CAROUSEL.UTIL.setImageBackIpad()
+
+        } else if ($(W).width() < 465) {
+            CAROUSEL.UTIL.setImageBackMobile()
+        } else {
+            CAROUSEL.UTIL.setImageBack()
         }
     })
 })(jQuery, window, document);
-

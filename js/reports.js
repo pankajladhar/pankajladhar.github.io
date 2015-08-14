@@ -1,15 +1,24 @@
 $(function() {
 
-	var str = "";
+    var str = "",
+        message;
 
-    var myDataRef = new Firebase("https://baglandingpage.firebaseio.com/customers");
+    var myDataRef = new Firebase("https://baglandingpage.firebaseio.com/");
     myDataRef.on('child_added', function(snapshot) {
-        var message = snapshot.val();
-        displayChatMessage(message.name, message.email, message.contactNumber, message.address);
+        message = snapshot.val();
+        if(Object.keys(message).length > 0){
+
+            displayChatMessage(message.prodName, message.prodRent, message.name, message.email, message.contactNumber, message.address, message.prodImgPath);
+        }
+        else{
+            console.log('dd')
+        }
+
     });
 
-    function displayChatMessage(name, email,contactNumber, address) {
-    	str = "<tr><td>"+name+"</td><td>"+email+"</td><td>"+contactNumber+"</td><td>"+address+"</td></tr>"
+    function displayChatMessage(prodName, prodRent, name, email, contactNumber, address) {
+        $('#reports tbody tr.spinner-tr').remove();
+        str = "<tr><td>" + prodName + "</td><td>" + prodRent + "</td><td>" + name + "</td><td>" + email + "</td><td>" + contactNumber + "</td><td>" + address + "</td></tr>"
         $('#reports tbody').append(str)
     };
 

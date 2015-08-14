@@ -5,8 +5,13 @@
         setProductName: function() {
             $('#detailsModal').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget)
-                var prodName = button.data('product-name')
-                $('.product-name').html(prodName)
+                var prodName = button.data('product-name');
+                var prodRent = button.data('product-rent');
+                var prodImgPath = button.data('image-path')
+                $('.product-name').html(prodName);
+                $('#prodName').val(prodName);
+                $('#prodRent').val(prodRent);
+                $('#prodImgPath').val(prodImgPath);
             })
         },
         resetForm: function() {
@@ -16,31 +21,48 @@
                 $('#email').val('');
                 $('#contactNumber').val('');
                 $('#address').val('');
+                $('#prodName').val('');
+                $('#prodRent').val('');
+
+                $("#thanks").slideUp('slow');
+                $(".modal-body").slideDown('slow');
+                $(".modal-header").show();
             })
         },
         submitForm: function() {
-            var ref = new Firebase("https://baglandingpage.firebaseio.com/");
+
+            $('.spinner-container').fadeIn();
+            $(".modal-body").slideUp('slow');
+            $(".modal-header").hide();
+            var usersRef = new Firebase("https://baglandingpage.firebaseio.com/");
 
             var onComplete = function(error) {
                 if (error) {
                     console.log('Synchronization failed');
                 } else {
-                    $("#thanks").slideDown(300);
+                    $("#thanks").slideDown('slow');
+
+                    $('.spinner-container').fadeOut('slow');
                 }
             };
 
             var name = $('#name').val();
-            email = $('#email').val(),
+                email = $('#email').val(),
                 contactNumber = $('#contactNumber').val(),
-                address = $('#address').val();
-            var usersRef = ref.child("customers");
+                address = $('#address').val(),
+                prodName = $('#prodName').val(),
+                prodRent = $('#prodRent').val(),
+                prodImgPath = $('#prodImgPath').val();
+           // var usersRef = ref.child("customers");
             usersRef.push({
                 name: name,
                 email: email,
                 contactNumber: contactNumber,
-                address: address
+                address: address,
+                prodName : prodName,
+                prodRent : prodRent,
+                prodImgPath : prodImgPath
             }, onComplete);
-            $("#detailsModal").modal('hide');
         },
         setupFormValidation: function() {
             //form validation rules
@@ -114,7 +136,7 @@
         PRODUCTS.UTIL.setupFormValidation();
         PRODUCTS.UTIL.closeAlertMessage();
         PRODUCTS.UTIL.scrollToProducts();
-        PRODUCTS.UTIL.removeAlertBox();
+        //PRODUCTS.UTIL.removeAlertBox();
         PRODUCTS.UTIL.setProductName();
         PRODUCTS.UTIL.resetForm();
         PRODUCTS.UTIL.showScrollToTop();

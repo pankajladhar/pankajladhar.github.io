@@ -4,8 +4,9 @@
     padding: 0; } }
 body {
   position: relative;
-  font-family: arial,Sans-serif;
-  padding: 0; }
+  font-family: arial, Sans-serif;
+  padding: 0;
+  min-height: 100%; }
   body.modal-open {
     padding-right: 15px; }
 
@@ -74,8 +75,9 @@ body {
   display: none; }
   #thanks span.alert {
     display: inline-block;
-    width: 100%;
-    position: relative; }
+    width: 96%;
+    position: relative;
+    margin: 45px 2% 30px 2%; }
     #thanks span.alert i {
       top: 0;
       font-size: 33px;
@@ -128,7 +130,8 @@ div.product-box {
   margin-bottom: 10px;
   position: relative;
   overflow: hidden;
-  padding: 20px 20px 25px; }
+  padding: 20px 20px 25px;
+  background: #fff; }
   @media (max-width: 767px) {
     div.product-box {
       border: 1px solid #ddd; } }
@@ -156,11 +159,11 @@ div.product-box {
     div.product-box .product-rate-wrapper span.product-rate-title {
       display: inline-block;
       line-height: 1; }
-    div.product-box .product-rate-wrapper span.product-rate-title {
-      padding-right: 5px; }
     div.product-box .product-rate-wrapper span.product-rate {
       font-weight: bold;
-      font-size: 20px; }
+      font-size: 20px;
+      background: url("../img/rupee-symbol.jpg") no-repeat 0 3px;
+      padding-left: 13px; }
   div.product-box .rent-title {
     color: #fff;
     border: 1px #000 solid;
@@ -175,10 +178,13 @@ div.product-box {
     div.product-box .rent-title:focus {
       outline: none; }
 
-.detailsModal .modal-header .close {
-  margin-top: -17px;
+.detailsModal .close {
   font-weight: normal;
-  font-size: 50px; }
+  font-size: 50px;
+  padding-right: 10px;
+  text-align: right;
+  width: 100%;
+  position: absolute; }
 .detailsModal h2.product-name {
   text-align: center;
   margin-top: 0;
@@ -195,6 +201,11 @@ div.product-box {
   .detailsModal .detail-form input.error,
   .detailsModal .detail-form textarea.error {
     border: 1px #ff0000 solid; }
+  .detailsModal .detail-form textarea {
+    height: 160px; }
+    @media screen and (max-width: 768px) {
+      .detailsModal .detail-form textarea {
+        height: auto; } }
 .detailsModal .btn-grp {
   text-align: right; }
 .detailsModal .btn-submit {
@@ -210,17 +221,58 @@ div.product-box {
 
 @media screen and (min-width: 768px) {
   .modal-dialog {
-    width: 70%;
+    width: 72%;
     margin: 2% 15%; } }
 footer {
   width: 100%;
   position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
   background: #000;
   color: #fff;
   padding: 15px 0 10px;
   line-height: 1;
   height: 40px;
   text-align: center; }
+
+.spinner-container {
+  display: none;
+  text-align: center; }
+  .spinner-container span {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 20px; }
+
+.spinner {
+  color: #1A9400;
+  font-size: 40px;
+  -webkit-animation: rotating 2s linear infinite;
+  text-align: center;
+  display: block;
+  padding: 30px 0 0; }
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+.report-container {
+  min-height: 600px; }
+  .report-container h1.report-title {
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 1; }
+  .report-container .table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dddddd;
+    text-transform: uppercase;
+    font-weight: normal;
+    background-color: #105375;
+    color: #fff;
+    text-align: center; }
+  .report-container td:first-child {
+    text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */

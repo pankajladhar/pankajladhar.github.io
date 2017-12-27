@@ -22,17 +22,41 @@ body {
   margin: 0 auto;
 }
 
-.App__header {
+.App__Header {
   background: #020421;
   color: #fff;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 140px;
+  @media (min-width: 767px) {
+    height: 200px;
+  }
   h1 {
-    font-size: 50px;
+    font-size: 35px;
     margin: 0;
+    @media (min-width: 767px) {
+      font-size: 50px;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 16px;
+    @media (min-width: 767px) {
+      font-size: 24px;
+    }
+  }
+
+  .App_SocialIcons {
+    a {
+      display: inline-block;
+
+      &:nth-child(even){
+        margin-left: 10px;
+      }
+    }
   }
 }
 
@@ -41,34 +65,4 @@ body {
   margin: 25px 0;
   width: 100%;
   flex-wrap: wrap;
-}
-
-
-
-
-
-
-.example-list-container {
-  margin: 30px auto;
-  text-align: center;
-}
-
-.example-list-container 
-
-.example-list-container ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.example-list-container ul li a {
-  display: block;
-  padding-bottom: 10px;
-  color: #000;
-  text-decoration: underline;
-  transition: all 0.5s;
-}
-
-.example-list-container ul li a:hover {
-  text-decoration: none;
 }

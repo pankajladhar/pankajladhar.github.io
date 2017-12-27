@@ -1,0 +1,77 @@
+.Tile {
+  width: 31%;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-sizing: content-box;
+  margin: 0px 0 25px 25px;
+  position: relative; }
+  .Tile .Tile-Image {
+    max-height: 190px;
+    overflow: hidden; }
+    .Tile .Tile-Image img {
+      width: 100%;
+      display: block; }
+  .Tile .Tile-Details {
+    padding: 20px; }
+    .Tile .Tile-Details .divider {
+      margin: 0 70px 20px;
+      border: none;
+      border-bottom: 1px #e5e5e5 solid; }
+  .Tile .ProjectInfo {
+    padding-bottom: 50px; }
+    .Tile .ProjectInfo .ProjectInfo-Title {
+      padding-bottom: 15px;
+      color: rgba(0, 0, 0, 0.84);
+      font-size: 21px;
+      line-height: 24px;
+      font-weight: 600;
+      font-family: 'Barlow Semi Condensed', sans-serif; }
+    .Tile .ProjectInfo .ProjectInfo-Description {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0; }
+  .Tile .AuthorInfo {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px; }
+    .Tile .AuthorInfo a {
+      color: rgba(0, 0, 0, 0.84);
+      display: block; }
+      .Tile .AuthorInfo a:hover {
+        text-decoration: underline; }
+    .Tile .AuthorInfo .AuthorInfo-Avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 2px #4caf4f solid;
+      margin-right: 20px; }
+    .Tile .AuthorInfo .AuthorInfo-submissionDate {
+      color: rgba(0, 0, 0, 0.54);
+      padding-top: 5px;
+      display: block; }
+  .Tile .Tile-CTA {
+    background: #f8f8f8;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    padding: 10px 0;
+    justify-content: flex-end;
+    display: flex; }
+    .Tile .Tile-CTA a {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: normal;
+      display: inline-block;
+      color: #777;
+      text-decoration: none;
+      margin-right: 20px; }
+      .Tile .Tile-CTA a:hover {
+        color: #232222;
+        text-decoration: underline; }
+      .Tile .Tile-CTA a:focus {
+        outline: none; }

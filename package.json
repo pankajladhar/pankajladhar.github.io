@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "PUBLIC_URL=. react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"

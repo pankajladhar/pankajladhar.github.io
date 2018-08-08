@@ -19,11 +19,15 @@ class App extends Component {
             <h1 className="App__title">Pankaj Ladhar</h1>
             <h2 className="App__SubTitle">Front End Engineer</h2>
             <div className="App_SocialIcons">
-              <a href="https://github.com/pankajladhar" target="_blank">
-                <InlineSVG src={githubSVG}/>
+              <a href="https://github.com/pankajladhar"
+                rel="noopener noreferrer"
+                target="_blank">
+                <InlineSVG src={githubSVG} />
               </a>
-              <a href="https://github.com/pankajladhar" target="_blank">
-                <InlineSVG src={linkedInSVG}/>
+              <a href="https://github.com/pankajladhar"
+                rel="noopener noreferrer"
+                target="_blank">
+                <InlineSVG src={linkedInSVG} />
               </a>
             </div>
           </div>
@@ -34,9 +38,9 @@ class App extends Component {
               data.map((item, index) => {
                 return (
                   <Tile
-                    key={`${item.projectName.replace(/\s/gi,'-')}`}
+                    key={`${item.projectName.replace(/\s/gi, '-')}`}
                     name={item.projectName}
-                    imageUrl={`images/${item.projectName.replace(/\s/gi,'-')}.png`}
+                    imageUrl={`images/${item.projectName.replace(/\s/gi, '-')}.png`}
                     demoUrl={item.demoUrl}
                     description={item.description}
                     githubUrl={item.githubUrl}

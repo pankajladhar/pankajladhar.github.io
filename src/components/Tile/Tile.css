@@ -14,7 +14,7 @@
     .Tile {
       width: 30%; } }
   .Tile .Tile-Image {
-    max-height: 190px;
+    height: 190px;
     overflow: hidden; }
     .Tile .Tile-Image img {
       width: 100%;

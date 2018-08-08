@@ -7,10 +7,6 @@ const propTypes = {}
 const defaultProps = {}
 
 export default class Tile extends Component {
-    constructor(props) {
-        super(props);
-    };
-
     render() {
         return (
             <div className="Tile">

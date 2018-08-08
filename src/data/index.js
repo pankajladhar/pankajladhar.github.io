@@ -1,5 +1,11 @@
 const data = [
     {
+        "projectName": "Speedy Math",
+        "githubUrl":"https://github.com/pankajladhar/speedy-math",
+        "demoUrl": "https://pankajladhar.github.io/speedy-math",
+        "description" : "An application which allows user (small kids) to practice basic Mathematics i.e  Addition, Subtraction, Multiply, Comparison"
+    },
+    {
         "projectName": "GFonts Space",
         "githubUrl":"https://github.com/pankajladhar/GFontsSpace",
         "demoUrl": "https://pankajladhar.github.io/GFontsSpace/",

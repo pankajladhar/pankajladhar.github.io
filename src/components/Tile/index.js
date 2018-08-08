@@ -11,7 +11,9 @@ export default class Tile extends Component {
         return (
             <div className="Tile">
                 <div className="Tile-Image">
-                    <img src={this.props.imageUrl}  alt={this.props.name}/>
+                    <a href={this.props.demoUrl} target="_blank">
+                        <img src={this.props.imageUrl}  alt={this.props.name}/>
+                    </a>
                 </div>
                 <div className="Tile-Details">
                     <hr className="divider" />

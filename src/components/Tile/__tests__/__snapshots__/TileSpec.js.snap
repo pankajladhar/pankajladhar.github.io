@@ -7,10 +7,15 @@ exports[`Tile renders correctly 1`] = `
   <div
     className="Tile-Image"
   >
-    <img
-      alt="name"
-      src="imageUrl"
-    />
+    <a
+      href="demoUrl"
+      target="_blank"
+    >
+      <img
+        alt="name"
+        src="imageUrl"
+      />
+    </a>
   </div>
   <div
     className="Tile-Details"

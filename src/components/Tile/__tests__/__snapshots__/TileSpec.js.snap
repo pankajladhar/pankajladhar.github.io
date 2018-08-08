@@ -4,27 +4,52 @@ exports[`Tile renders correctly 1`] = `
 <div
   className="Tile"
 >
-  githubId : 
-   
-  <br />
-  githubUrl : 
-   
-  <br />
-  longDesc : 
-   
-  <br />
-  name : 
-   
-  <br />
-  shortDesc : 
-   
-  <br />
-  submissionDate : 
-   
-  <br />
-  thumb : 
-   
-  <br />
-  twitterId : 
+  <div
+    className="Tile-Image"
+  >
+    <img
+      alt="name"
+      src="imageUrl"
+    />
+  </div>
+  <div
+    className="Tile-Details"
+  >
+    <hr
+      className="divider"
+    />
+    <div
+      className="ProjectInfo"
+    >
+      <h3
+        className="ProjectInfo-Title"
+      >
+         
+        name
+         
+      </h3>
+      <p
+        className="ProjectInfo-Description"
+      >
+        description
+      </p>
+    </div>
+  </div>
+  <div
+    className="Tile-CTA"
+  >
+    <a
+      href="demoUrl"
+      target="_blank"
+    >
+      Demo
+    </a>
+    <a
+      href="githubUrl"
+      target="_blank"
+    >
+      Code
+    </a>
+  </div>
 </div>
 `;

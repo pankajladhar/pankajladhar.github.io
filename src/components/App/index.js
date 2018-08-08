@@ -31,9 +31,10 @@ class App extends Component {
         <div className="container">
           <div className="TileContainer">
             {
-              data.map((item) => {
+              data.map((item, index) => {
                 return (
                   <Tile
+                    key={`${item.projectName.replace(/\s/gi,'-')}`}
                     name={item.projectName}
                     imageUrl={`images/${item.projectName.replace(/\s/gi,'-')}.png`}
                     demoUrl={item.demoUrl}

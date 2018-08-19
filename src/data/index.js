@@ -3,31 +3,36 @@ const data = [
         "projectName": "Keycode",
         "githubUrl":"https://github.com/pankajladhar/keycode",
         "demoUrl": "https://pankajladhar.github.io/keycode",
-        "description" : "A simple tool which can be used to visualize JavaScript keycodes on keyboard key press."
+        "description" : "A simple tool which can be used to visualize JavaScript keycodes on keyboard key press.",
+        "tags": ["react"]
     },
     {
         "projectName": "Speedy Math",
         "githubUrl":"https://github.com/pankajladhar/speedy-math",
         "demoUrl": "https://pankajladhar.github.io/speedy-math",
-        "description" : "An application which allows user (small kids) to practice basic Mathematics i.e  Addition, Subtraction, Multiply, Comparison"
+        "description" : "An application which allows user (small kids) to practice basic Mathematics i.e  Addition, Subtraction, Multiply, Comparison",
+        "tags": ["PWA", "react", "workbox"]
     },
     {
         "projectName": "run-git-command",
         "githubUrl":"https://github.com/pankajladhar/run-git-command",
         "demoUrl": "https://www.npmjs.com/package/run-git-command",
-        "description" : "A light weight promise wrapper for running git commands in any node.js application."
+        "description" : "A light weight promise wrapper for running git commands in any node.js application.",
+        "tags": ["git", "node", "npm"]
     },
     {
         "projectName": "GFonts Space",
         "githubUrl":"https://github.com/pankajladhar/GFontsSpace",
         "demoUrl": "https://pankajladhar.github.io/GFontsSpace/",
-        "description" : "Allows user to play with available Google fonts with comparison multiple fonts."
+        "description" : "Allows user to play with available Google fonts with comparison multiple fonts.",
+        "tags": ["react", "redux", "google fonts"]
     },
     {
         "projectName": "react-front-cli",
         "githubUrl":"https://github.com/pankajladhar/react-front-cli",
         "demoUrl": "https://www.npmjs.com/package/react-front-cli",
-        "description" : "A command line tool which helps to create Reactjs component skeletion."
+        "description" : "A command line tool which helps to create Reactjs component skeletion.",
+        "tags": ["cli", "node", "npm", "react"]
     },
     {
         "projectName": "Github Search Engine",

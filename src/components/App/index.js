@@ -42,6 +42,7 @@ class App extends Component {
                     name={item.projectName}
                     imageUrl={`images/${item.projectName.replace(/\s/gi, '-')}.png`}
                     demoUrl={item.demoUrl}
+                    tags={item.tags}
                     description={item.description}
                     githubUrl={item.githubUrl}
                   />

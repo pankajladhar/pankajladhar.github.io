@@ -5,7 +5,8 @@
   box-sizing: content-box;
   width: 100%;
   margin: 25px 25px 0 25px;
-  position: relative; }
+  display: flex;
+  flex-direction: column; }
   @media (min-width: 767px) {
     .Tile {
       width: 46%;
@@ -26,14 +27,15 @@
       border: none;
       border-bottom: 1px #e5e5e5 solid; }
   .Tile .ProjectInfo {
-    padding-bottom: 50px; }
+    padding-bottom: 20px; }
     .Tile .ProjectInfo .ProjectInfo-Title {
       padding-bottom: 15px;
       color: rgba(0, 0, 0, 0.84);
       font-size: 21px;
       line-height: 24px;
       font-weight: 600;
-      font-family: 'Barlow Semi Condensed', sans-serif; }
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      margin-bottom: 0; }
     .Tile .ProjectInfo .ProjectInfo-Description {
       color: rgba(0, 0, 0, 0.54);
       font-size: 14px;
@@ -59,13 +61,12 @@
       color: rgba(0, 0, 0, 0.54);
       padding-top: 5px;
       display: block; }
+  .Tile .Tile-Footer {
+    margin-top: auto; }
   .Tile .Tile-CTA {
-    background: #f8f8f8;
-    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    right: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: #f8f8f8;
     padding: 10px 0;
     justify-content: flex-end;
     display: flex; }
@@ -82,3 +83,14 @@
         text-decoration: underline; }
       .Tile .Tile-CTA a:focus {
         outline: none; }
+  .Tile .Tile-Tags {
+    padding: 0 16px 10px 16px; }
+    .Tile .Tile-Tags span {
+      display: inline-block;
+      background: #cc0000;
+      border-radius: 5px;
+      padding: 3px 8px;
+      font-size: 12px;
+      color: #fff;
+      line-height: 1;
+      margin-right: 5px; }

@@ -12,10 +12,22 @@ const data = [
         "description" : "An application which allows user (small kids) to practice basic Mathematics i.e  Addition, Subtraction, Multiply, Comparison"
     },
     {
+        "projectName": "run-git-command",
+        "githubUrl":"https://github.com/pankajladhar/run-git-command",
+        "demoUrl": "https://www.npmjs.com/package/run-git-command",
+        "description" : "A light weight promise wrapper for running git commands in any node.js application."
+    },
+    {
         "projectName": "GFonts Space",
         "githubUrl":"https://github.com/pankajladhar/GFontsSpace",
         "demoUrl": "https://pankajladhar.github.io/GFontsSpace/",
         "description" : "Allows user to play with available Google fonts with comparison multiple fonts."
+    },
+    {
+        "projectName": "react-front-cli",
+        "githubUrl":"https://github.com/pankajladhar/react-front-cli",
+        "demoUrl": "https://www.npmjs.com/package/react-front-cli",
+        "description" : "A command line tool which helps to create Reactjs component skeletion."
     },
     {
         "projectName": "Github Search Engine",

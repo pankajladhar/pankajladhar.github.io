@@ -41,20 +41,27 @@ exports[`Tile renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="Tile-CTA"
+    className="Tile-Footer"
   >
-    <a
-      href="demoUrl"
-      target="_blank"
+    <div
+      className="Tile-Tags"
+    />
+    <div
+      className="Tile-CTA"
     >
-      Demo
-    </a>
-    <a
-      href="githubUrl"
-      target="_blank"
-    >
-      Code
-    </a>
+      <a
+        href="demoUrl"
+        target="_blank"
+      >
+        Demo
+      </a>
+      <a
+        href="githubUrl"
+        target="_blank"
+      >
+        Code
+      </a>
+    </div>
   </div>
 </div>
 `;

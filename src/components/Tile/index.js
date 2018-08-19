@@ -8,7 +8,6 @@ const defaultProps = {}
 
 export default class Tile extends Component {
     renderTags(tags) {
-        console.log(tags)
         return (
             tags.map((tag, index) => <span key={`${tag}-${index}`}>{tag}</span>)
         )

@@ -33,5 +33,11 @@
   "bugs": {
     "url": "https://github.com/pankajladhar/pankajladhar.github.io/issues"
   },
-  "homepage": "https://github.com/pankajladhar/pankajladhar.github.io#readme"
+  "homepage": "https://github.com/pankajladhar/pankajladhar.github.io#readme",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js"
+    ]
+  }
 }

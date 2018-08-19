@@ -1,5 +1,11 @@
 const data = [
     {
+        "projectName": "Keycode",
+        "githubUrl":"https://github.com/pankajladhar/keycode",
+        "demoUrl": "https://pankajladhar.github.io/keycode",
+        "description" : "A simple tool which can be used to visualize JavaScript keycodes on keyboard key press."
+    },
+    {
         "projectName": "Speedy Math",
         "githubUrl":"https://github.com/pankajladhar/speedy-math",
         "demoUrl": "https://pankajladhar.github.io/speedy-math",

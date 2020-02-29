@@ -8,3 +8,4 @@
 * [Reactgram](https://pankajladhar.github.io/Reactgram/#/) - Clone of instagram which basic functionality of like image or add comments on image
 * [React Logo Generator](https://pankajladhar.github.io/react-logo-generator/) - An application to play with react logo to generate svg/png with different color and background color.
 * [CSS Snippets](https://pankajladhar.github.io/css-snippets/) -Collection of some of CSS cool stuff
+* [PWA automation using puppeteer](https://github.com/pankajladhar/PWA-automation-puppeteer) - Puppeteer is a Node library developed by the Chrome DevTools team for testing and automating headless and full Chrome. In this talk, learn how to automate PWA ( Progressive web app) features like service worker registration, offline capability, caching strategies
